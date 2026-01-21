@@ -1,0 +1,30 @@
+{
+  "name": "test-automation-swag-lab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "allure:move": "shx rm -rf playwright-report/allure-results playwright-report/allure-report && shx mkdir -p playwright-report && shx mv allure-results playwright-report/allure-results",
+    "allure:generate": "allure generate playwright-report/allure-results --clean -o playwright-report/allure-report",
+    "allure:open": "allure open playwright-report/allure-report",
+    "slab:preparation": "npx playwright test --project=preparation",
+    "slab:sanity": "npx playwright test --project=sanity"
+  },
+  "keywords": [
+    "DUMMY Project"
+  ],
+  "author": "Sadia Afrose",
+  "license": "ISC",
+  "description": "Playwright end-to-end tests for swag lab application",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
