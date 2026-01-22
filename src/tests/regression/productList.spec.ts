@@ -1,7 +1,7 @@
 import { test } from '../../fixtures/base.regression.fixture';
 import { SORT_OPTIONS } from '../../utils/Constants';
 
-test.describe.serial('Dashboard', () => {
+test.describe('Dashboard', () => {
   let prices: string[], names: string[];
 
   test('Verify product prices are displayed correctly', async ({ productListPage }) => {
